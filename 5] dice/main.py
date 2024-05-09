@@ -23,27 +23,16 @@ def roll_the_dice(input_dice):
 
     number_of_rolls, type_of_dice, modifier = map(int, [number_of_rolls, type_of_dice, modifier])
 
-    print(f"number_of_rolls: {type(number_of_rolls)}")
-    print(f"type_of_dice: {type(type_of_dice)}")
-    print(f"modifier: {type(modifier)}")
-    print(f"number_of_rolls: {number_of_rolls}")
-    print(f"type_of_dice: {type_of_dice}")
-    print(f"modifier: {modifier}")
-    print()
-
-    dice_sum = 0
-    for i in range(number_of_rolls):
-        hlp = randint(1, type_of_dice)
-        print(f"hlp:{hlp}")
-        dice_sum += hlp
-    print(f"dice_sum: {dice_sum}")
-
-    calculation1 = dice_sum + modifier
-    print(f"Calculation1: {calculation1}")
+    # dice_sum = 0
+    # for i in range(number_of_rolls):
+    #     dice_sum += randint(1, type_of_dice)
+    #
+    # calculation1 = dice_sum + modifier
+    # print(f"Calculation1: {calculation1}")
 
     calculation = sum([randint(1, type_of_dice) for i in range(number_of_rolls)]) + modifier
 
-    return f"calculation: {calculation}"
+    return f"The Result of the dice roll {input_dice} is {calculation}"
 
 
 if __name__ == "__main__":
